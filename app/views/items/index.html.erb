@@ -1,3 +1,4 @@
+<% if user_signed_in? %>
 <div class="row">
   <div class="card col-md-8 offset-md-2 mb-3">
     <% @items.each do |item| %>
@@ -14,5 +15,5 @@
     </div>
     <% end %>
   </div>
-
 </div>
+<% end %>

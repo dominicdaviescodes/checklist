@@ -4,5 +4,5 @@
 
 <%= link_to "Back", root_path, class: "btn btn-info" %>
 <%= link_to "Edit", edit_item_path(@item), class: "btn btn-warning" %>
-<%= link_to "Delete", item_path(@item), class: "btn btn-danger", method: :delete,
+<%= link_to "Delete", item_path(@item), class: "btn btn-outline-danger", method: :delete,
                   data: { confirm: "Are you sure?" } %>
