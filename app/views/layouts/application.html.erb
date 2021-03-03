@@ -11,6 +11,13 @@
 </head>
 
 <body>
+  <div class="jumbotron text-white" style="background-image: url(https://images.pexels.com/photos/1583582/pexels-photo-1583582.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940); background-size: 100%;">
+    <div class="container">
+      <h1 class="display-4">Welcome to Checklist!</h1>
+      <p class="lead">Start sorting your life out right now, by adding tasks.</p>
+      <%= link_to "New Item", new_item_path, class: "btn btn-success" %>
+    </div>
+  </div>
   <div class="container">
     <%= yield %>
   </div>
