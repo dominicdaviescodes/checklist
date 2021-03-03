@@ -11,6 +11,26 @@
 </head>
 
 <body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <%= link_to "Checklist", root_path, class: "navbar-brand" %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <% if current_user.present? %>
+          <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-outline-info" %></li>
+          <% else %>
+          <li class="nav-item"><%= link_to "Log In", new_user_session_path, class: "btn btn btn-outline-primary mr-2" %></li>
+          <li class="nav-item"><%= link_to "Sign Up", new_user_registration_path, class: "btn btn-success mr-2" %></li>
+          <% end %>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
   <div class="jumbotron text-white" style="background-image: url(https://images.pexels.com/photos/1583582/pexels-photo-1583582.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940); background-size: 100%;">
     <div class="container">
       <h1 class="display-4">Welcome to Checklist!</h1>
